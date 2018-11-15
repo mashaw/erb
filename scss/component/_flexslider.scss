@@ -82,7 +82,7 @@
 			.no-js .flexslider .slides>li:first-child {
 			    display: block;
 			}
-/* ====================================================================================================================
+			/* ====================================================================================================================
  * DEFAULT THEME
  * ====================================================================================================================*/
 			
@@ -92,7 +92,9 @@
 			    //background: $midblue;
 			    border: none;
 			    zoom: 1;
-                .field {margin:0}
+			    .field {
+			        margin: 0
+			    }
 			}
 			
 			.flexslider .slides {
@@ -153,14 +155,15 @@
 			        &:before {
 			            @include icon-font('\e801');
 			            font-size: 42px;
-			            line-height:1;
-                        width:auto;text-shadow: 0px 0px 2px $darkblue;
-			            &:hover ,
-                        &:focus  {
+			            line-height: 1;
+			            width: auto;
+			            text-shadow: 0px 0px 2px $darkblue;
+			            &:hover,
+			            &:focus {
 			                text-decoration: none!important;
 			            }
-                        &:focus  {
-			                color:red!important;
+			            &:focus {
+			                color: red!important;
 			            }
 			        }
 			        &.flex-prev {
@@ -229,30 +232,30 @@
 			}
 			
 			.flexslider {
-			    //margin-bottom: 0
+			    background: $darkblue;
 			}
 			
 			.flex-control-paging li a {
 			    width: 25px;
 			    height: 25px;
 			    display: block;
-			    background:#fff ;
+			    background: #fff;
 			    cursor: pointer;
 			    text-indent: -9999px;
 			    margin: 0 5px;
-                border: 3px #fff solid;
+			    border: 3px #fff solid;
 			    border-radius: 0;
-                box-shadow: 0px 0px 2px $darkblue;
+			    box-shadow: 0px 0px 2px $darkblue;
 			    &:hover {
 			        background: $darkblue;
-                    box-shadow: 0px 0px 2px $darkblue;
+			        box-shadow: 0px 0px 2px $darkblue;
 			    }
 			    &.flex-active,
 			    &.flex-active:hover {
 			        background: $midblue;
 			        cursor: default;
 			        border-color: #fff;
-                    box-shadow: 0px 0px 2px $darkblue;
+			        box-shadow: 0px 0px 2px $darkblue;
 			    }
 			}
 			
@@ -264,6 +267,9 @@
 			    right: auto;
 			    padding: 15px;
 			    max-width: 300px;
+			    @media all and (max-width: 960px) {
+			        max-width: 66%;
+			    }
 			    background: $darkbluetint;
 			    h2 {
 			        font-size: 1.66em;
@@ -274,24 +280,38 @@
 			        font-size: 1em;
 			        line-height: 1.3;
 			        color: #fff;
-			        margin: 0 0 0.66em 0;;
-                    
+			        margin: 0.66em 0;
 			    }
 			    a {
 			        color: #fff!important;
 			    }
+			    .node-readmore {
+			        margin-top: 1em;
+			        a {
+			            border: 1px solid #fff
+			        }
+			    }
 			}
 			
-			@media all and (max-width: 768px) {
-                
-                .flex-direction-nav    {display:none} 
+			@media all and (max-width: 960px) {
+			    .flex-direction-nav {
+			        display: none
+			    }
 			    .flex-control-nav {
 			        //position:relative;
-                    bottom:0;right:15px;width:auto;
-                    //top:auto;
+			        bottom: 0;
+			        right: 15px;
+			        width: auto;
+			        //top:auto;
 			    }
+			}
+			    @media all and (max-width: 768px) {
+			    
+                
 
-			    .banner-wrapper  {
+                
+                
+			    .banner-wrapper {
 			        position: relative;
 			        bottom: auto;
 			        left: auto;

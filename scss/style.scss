@@ -66,6 +66,11 @@ a:hover {
             color: #fff;
         }
     }
+    &.navbar-default {padding-bottom: 0;
+        @media all and (min-width: 768px) {
+            padding-bottom: 25px;
+        }
+    }
 }
 header.header {
     width: 100%;
@@ -322,9 +327,15 @@ footer.footer_lower {
     }
 }
 
+// === Event dates ===//
 
+.field--name-field-event-type  { font-weight: bold;
+    font-size: 18px;}
 
-
+.field--label-inline .field--label {
+    font-weight: bold;
+    font-size: 16px;
+}
 
 
 

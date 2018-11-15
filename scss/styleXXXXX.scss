@@ -1,0 +1,42 @@
+// Default variables.
+@import 'component/default-variables';
+
+// Bootstrap Framework.
+@import '../bootstrap/assets/stylesheets/bootstrap';
+
+// Base-theme overrides.
+//@import 'component/overrides';
+
+@import 'component/mixins';
+
+@import 'component/fonts';
+
+@import 'component/images';
+
+////@import 'component/navigation';
+
+//@import 'component/flexslider';
+
+
+// Brand colours
+
+//$darkblue:#4f6da1;
+//$midblue:#a8d0e6;
+//$lightblue:#def5fd;
+
+//$darkgrey:#58585a;
+
+//$lightgrey:#eeeeee;
+
+
+a:link,
+a:visited {
+    color: $blue;
+}
+
+a:hover {
+    color: black!important;
+    text-decoration: underline;
+}
+
+
