@@ -18,7 +18,8 @@
         margin: 0 2.5% 20px 0;
       
         clear: left;
-        max-width: 48.5%;width: 48.5%;
+        max-width: 48.5%;
+        width: 48.5%;
         img {
             width: 100%
         }
@@ -32,14 +33,13 @@
     .field {
         margin: 0
     }
-    figcaption {font-size:90%;
+    figcaption {@include work(400);
+        font-size:90%;
         line-height:1.3;
-        background: $lightblue;
-        border-bottom: 3px solid $darkblue;
-        padding: 6px 2px;
+        background: $lightgrey;
+        padding: 6px 4px;
           &:before {
         @include icon-font('\e803');
-        font-family: 'cn_icons3';
         font-size: inherit;
         margin-right: 0.5em;
     }
@@ -56,14 +56,24 @@
     }
 }
 
-/*/  ===  Colorbox window === /*/
+/*/  ===  Video === /*/
 
-#cboxTitle {
-    font-size: 14px;
-    &:before {
-        @include icon-font('\e803');
-          font-family: 'cn_icons3';
-        font-size: inherit;
-        margin-right: 0.5em;
+.field--name-field-media-oembed-video  {
+    float: none;
+    clear: both;
+    margin: 0;
+    position: relative;
+    padding-bottom: 56.25%;
+    /* 16:9 */
+    padding-top: 0;
+    height: 0;
+    iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%!important;
+        height: 100%!important;
+         overflow:hidden;
+        
     }
 }

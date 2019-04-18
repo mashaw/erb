@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   id="Layer_1"
+   data-name="Layer 1"
+   viewBox="0 0 30 30.00005"
+   version="1.1"
+   width="30"
+   height="30.00005">
+  <metadata
+     id="metadata13">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title>PanelTypeIcons</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs11" />
+  <title
+     id="title2">PanelTypeIcons</title>
+  <path
+     d="m 24.542967,5.9470385 h -13.56 v 3.6099982 h 13.56 z m 0,10.8399945 h -5.43 v -3.649999 h 5.43 z m -13.56,7.16 h 13.56 m -13.56,-3.58 h 13.56 m -13.56,-3.61 h 5.42 m -5.42,-3.619999 h 5.42"
+     style="fill:none;stroke:#000000;stroke-width:1.25;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+     id="path4" />
+  <path
+     d="m 3.762967,28.947033 h 21.68 a 3.61,3.61 0 0 0 3.61,-3.61 V 1.8470385 a 0.9,0.9 0 0 0 -0.9,-0.89999993 h -20.78 a 0.9,0.9 0 0 0 -0.9,0.89999993 V 26.237033 a 2.71,2.71 0 0 1 -5.42,0 V 9.4970367 h 2.26"
+     style="fill:none;stroke:#000000;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+     id="path6" />
+</svg>

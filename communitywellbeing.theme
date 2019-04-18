@@ -1,0 +1,21 @@
+<?php
+/**
+ * @file
+ * Bootstrap sub-theme.
+ *
+ * Place your custom PHP code in this file.
+
+*/
+
+function communitywellbeing_page_alter(&$page) {
+
+  $node = menu_get_object();
+  if (!empty($node->type) && ($node->type == 'story')) {
+    $breadcrumbs = array();
+    $breadcrumbs[] = l(t('Home'), '<front>');
+    $breadcrumbs[] = l('Stories', '/noticeboard/story');
+    drupal_set_breadcrumb($breadcrumbs);
+
+
+  }
+}

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24.246" height="28.93" data-name="Layer 1" version="1.1" viewBox="0 0 24.246355 28.930048" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<metadata>
+<rdf:RDF>
+<cc:Work rdf:about="">
+<dc:format>image/svg+xml</dc:format>
+<dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+</cc:Work>
+</rdf:RDF>
+</metadata>
+<title>PanelTypeIcons</title>
+<line x1="12.246" x2="12.246" y1="23.45" y2="27.98" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="m2.5464 9.93h1.22v4.5a8.5 8.5 0 1 0 17 0v-4.52h1.18m-9.7 10.39v0a5.85 5.85 0 0 1 -5.8 -5.87v-8.13a5.8 5.8 0 1 1 11.6 0v8.13a5.85 5.85 0 0 1 -5.8 5.87zm1.79-6.77h3.57m-3.57-3.16h3.57m-3.57-3.17h3.57m-10.72 6.33h3.57m-3.57-3.16h3.57m-3.57-3.17h3.57m-4.01 21.23h11.6" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="m23.746 9.92a0.9 0.9 0 1 1 -0.9 -0.9 0.9 0.9 0 0 1 0.9 0.9z" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="m2.5464 9.92a0.9 0.9 0 1 1 -0.9 -0.9 0.9 0.9 0 0 1 0.9 0.9z" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+</svg>

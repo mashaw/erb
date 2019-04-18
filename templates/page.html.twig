@@ -62,51 +62,50 @@
         theme.settings.navbar_position ? 'navbar-' ~ theme.settings.navbar_position|clean_class : container,
       ]
     %}
-    <header{{ navbar_attributes.addClass(navbar_classes) }} id="navbar" role="banner">
-      {% if not navbar_attributes.hasClass(container) %}
+    <header class="header"  id="navbar" role="banner">
+
         <div class="{{ container }}">
-      {% endif %}
-             <div class="header-wrapper">
+
       <div class="navbar-header">
         {{ page.navigation }}
         {# .btn-navbar is used as the toggle for collapsed navbar content #}
         {% if page.navigation_collapsible %}
-          <button type="button" class="navbar-toggle collapsed new" data-toggle="collapse" data-target="#navbar-collapse">
+        <button type="button" class="navbar-toggle collapsed new" data-toggle="collapse" data-target="#navbar-collapse">
             <span class="sr-only">{{ 'Toggle navigation'|t }}</span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
         {% endif %}
-      </div>
-
-
-       {# Search #}
+          {# search #}
       {% if page.search %}
         {% block search %}
-          <div  class="search_region">
             {{ page.search }}
-          </div>
         {% endblock %}
       {% endif %}
-</div>
+      </div>
+ </div>
 
-      {# Navigation (collapsible) #}
-      {% if page.navigation_collapsible %}
-        <div id="navbar-collapse" class="navbar-collapse collapse">
-          {{ page.navigation_collapsible }}
-        </div>
-      {% endif %}
       {% if not navbar_attributes.hasClass(container) %}
         </div>
       {% endif %}
     </header>
   {% endblock %}
 {% endif %}
-
+ {# Navigation (collapsible) #}
+      {% if page.navigation_collapsible %}
+        <div id="navbar-collapse" class="navbar-collapse collapse">
+            <div class="{{ container }}">
+          {{ page.navigation_collapsible }}
+        </div>
+            </div>
+      {% endif %}
 {# Main #}
 {% block main %}
-  <div role="main" class="main-container {{ container }} js-quickedit-main-content">
+
+  <div role="main" class="main-container js-quickedit-main-content">
+
+<div class="{{ container }}">
     <div class="row">
 
       {# Header #}
@@ -114,6 +113,8 @@
         {% block header %}
           <div class="col-sm-12" role="heading">
             {{ page.header }}
+
+
           </div>
         {% endblock %}
       {% endif %}
@@ -121,21 +122,22 @@
       {# Sidebar First #}
       {% if page.sidebar_first|render|striptags %}
         {% block sidebar_first %}
-          <aside class="col-md-3 col-sm-4" role="complementary">
+          <aside class="col-sm-4" role="complementary">
             {{ page.sidebar_first }}
           </aside>
         {% endblock %}
       {% endif %}
 
-{# Content #}
-{%
-  set content_classes = [
-    page.sidebar_first|render|striptags and page.sidebar_second|render|striptags ? 'col-md-6 col-sm-4',
-    page.sidebar_first|render|striptags and page.sidebar_second|render|striptags  is empty ? 'col-md-9 col-sm-8',
-    page.sidebar_second|render|striptags and page.sidebar_first|render|striptags is empty ? 'col-md-9 col-sm-8',
-    page.sidebar_first|render|striptags is empty and page.sidebar_second|render|striptags is empty ? 'col-sm-12'
-  ]
-%}
+      {# Content #}
+      {%
+        set content_classes = [
+          page.sidebar_first|render|striptags  and page.sidebar_second|render|striptags ? 'col-sm-6',
+          page.sidebar_first|render|striptags  and page.sidebar_second|render|striptags is empty ? 'col-sm-8',
+          page.sidebar_second|render|striptags  and page.sidebar_first|render|striptags is empty ? 'col-sm-8',
+          page.sidebar_first|render|striptags  is empty and page.sidebar_second|render|striptags is empty ? 'col-sm-12'
+        ]
+      %}
+
 
       <section{{ content_attributes.addClass(content_classes) }}>
 
@@ -158,35 +160,74 @@
           <a id="main-content"></a>
           {{ page.content }}
         {% endblock %}
+
+
       </section>
 
+
+
       {# Sidebar Second #}
-      {% if page.sidebar_second|render|striptags %}
+     {% if page.sidebar_second|render|striptags %}
         {% block sidebar_second %}
-          <aside class="col-md-3 col-sm-4" role="complementary">
+          <aside class="col-sm-3" role="complementary">
             {{ page.sidebar_second }}
           </aside>
         {% endblock %}
       {% endif %}
+
+        {% if page.content_tags %}
+         {% block content_tags %}
+
+      <div class="content-tags col-sm-4" role="complementary">
+
+          {{ page.content_tags }}
+
+          </div>
+        {% endblock %}
+           {% endif %}
     </div>
   </div>
+
+
+        {% if node.getType == 'story' %}
+
+            <h2 class="page-type">Stories . . .</h2>
+
+      {% elseif node.getType == 'activity' %}
+
+            <h2 class="page-type">Activities . . .</h2>
+
+      {% elseif node.getType in ['interview', 'event', 'opinion', 'article'] %}
+
+            <h2 class="page-type lower">More {{ node.type.entity.label }}s . . .</h2>
+
+      {% endif %}
+
+
+    {% if page.content_lower %}
+
+ {% block content_lower %}
+
+      <div class="{{ container }} content-lower">
+
+          {{ page.content_lower }}
+
+          </div>
+        {% endblock %}
+          {% endif %}
+
+        </div>
 {% endblock %}
+
+
 
 {% if page.footer %}
   {% block footer %}
-    <footer class="footer" role="contentinfo">
-    <div class="main-container {{ container }}"
+    <footer class="footer image{{ random(4) }}" role="contentinfo">
+              <div class="{{ container  }}">
       {{ page.footer }}
-      </div>
-    </footer>
-  {% endblock %}
-{% endif %}
-{% if page.footer_lower %}
-  {% block footer_lower %}
-    <footer class="footer_lower" role="contentinfo">
-    <div class="main-container {{ container }}"
-      {{ page.footer_lower }}
-      </div>
+
+        </div>
     </footer>
   {% endblock %}
 {% endif %}
